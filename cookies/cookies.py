@@ -22,7 +22,7 @@ class Cookies(commands.Cog):
 
     __version__ = "1.3.1"
 
-    def __init__(self, bot: Red):
+   async def __init__(self, bot: Red):
         self.bot = bot
         self.config = Config.get_conf(
             self, identifier=16548964843212314, force_registration=True
@@ -57,7 +57,7 @@ class Cookies(commands.Cog):
         for guild in self.bot.guilds:
             await self.config.member_from_ids(guild.id, user_id).clear()
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
+    async def format_help_for_context(self, ctx: commands.Context) -> str:
         context = super().format_help_for_context(ctx)
         return f"{context}\n\nVersion: {self.__version__}"
 
