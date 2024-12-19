@@ -22,7 +22,7 @@ class Cookies(commands.Cog):
 
     __version__ = "1.3.1"
 
-   async def __init__(self, bot: Red):
+ async def __init__(self, bot: Red):
         self.bot = bot
         self.config = Config.get_conf(
             self, identifier=16548964843212314, force_registration=True
