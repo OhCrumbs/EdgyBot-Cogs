@@ -1,4 +1,4 @@
-from .Cookies import Cookies
+from .cookies import cookies
 
 def setup(bot):
-    bot.add_cog(Cookies())
+    bot.add_cog(cookies())
